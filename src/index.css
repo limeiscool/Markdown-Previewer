@@ -1,0 +1,81 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #161616;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#app {
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: 1fr;
+  place-items: center;
+  place-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  min-width: 320px;
+}
+
+img {
+  width: 50%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  min-height: 100lvh;
+}
+
+#editor,
+#preview {
+  background-color: #242424;
+  margin: 0;
+  padding: 0;
+}
+
+#editor {
+  min-width: 320px;
+  min-height: 150px;
+}
+
+code {
+  background-color: #363636;
+  color: rgb(255, 208, 0);
+}
+
+.border {
+  padding: 6px 6px;
+  animation: loop 2s linear infinite;
+  background: repeating-linear-gradient(90deg, #59309b, #3897d7, #59309b);
+  background-size: 200% auto;
+  background-position: 0 0;
+  border-radius: 3px;
+  box-shadow: 0 0 8px 2px #1d4a4c;
+}
+@keyframes loop {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (min-width: 1048px) {
+  #app {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  #editor {
+    min-width: 500px;
+    min-height: 250px;
+  }
+}
